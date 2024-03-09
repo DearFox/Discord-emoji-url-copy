@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Discord emoji url copy
 // @namespace    https://github.com/DearFox/Discord-emoji-url-copy
-// @version      0.1
+// @version      0.2
 // @description  Click on the gray emoji in the list of your emojis to copy the link to it. (does not remove the advertising sign about purchasing discord nitro)
 // @author       DearFox
 // @match        https://discord.com/*
@@ -17,8 +17,8 @@
 function logCurrentElement() {
   const image = this.querySelector('img');
   if (image) {
-    console.log(image.src);
-      navigator.clipboard.writeText(image.src)
+    console.log(image.src.replace("webp", "png"));
+      navigator.clipboard.writeText(image.src.replace("webp", "png"))
   .then(() => {
     // Получилось!
   })
