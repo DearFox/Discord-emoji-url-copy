@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Discord emoji url copy
 // @namespace    https://github.com/DearFox/Discord-emoji-url-copy
-// @version      0.2
+// @version      0.3
 // @description  Click on the gray emoji in the list of your emojis to copy the link to it. (does not remove the advertising sign about purchasing discord nitro)
 // @author       DearFox
 // @match        https://discord.com/*
@@ -30,7 +30,7 @@ function logCurrentElement() {
 
 // Function to add event listener to buttons
 function addButtonListeners() {
-  const buttons = document.querySelectorAll('.emojiItemDisabled__36cbf'); // <== Возможно нужно будет поменять emojiItemDisabled__36cbf на другой, если дискорд обновится
+  const buttons = document.querySelectorAll('.emojiItemMedium__344c5'); // <== Возможно нужно будет поменять emojiItemDisabled__36cbf на другой, если дискорд обновится
   buttons.forEach(button => {
     button.addEventListener('click', logCurrentElement);
   });
